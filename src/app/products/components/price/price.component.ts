@@ -18,13 +18,16 @@ export class PriceComponent implements OnInit, OnChanges, OnDestroy {
     console.log('Componente HIJOOOOOOO AHHH: ngOnInit');
     this.interval$ = interval(1000).subscribe( value => console.log(`Contador de muertes causadas por Temach: ${value}`) )
   }
+  
   ngOnChanges(changes: SimpleChanges): void {
     console.log('Componente HIJOOOOOOO AHHH: ngOnChanges');
     console.log({changes});
   }
+  
   ngOnDestroy(): void {
     console.log('Componente HIJOOOOOOO AHHH: ngOnDestroy');
     this.interval$?.unsubscribe();
   }
+  
 
 }
